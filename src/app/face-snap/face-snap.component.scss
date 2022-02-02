@@ -1,0 +1,77 @@
+.container-flex {
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
+.face-snap-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    width: 640px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 5px;
+    border-radius: 1%;
+    img {
+      width: 100%;
+      
+    }
+  }
+
+
+
+.location {
+  font-style: italic;
+}
+
+button {
+  background-color: transparent;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-right: 20px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  &:active {
+    transform: translate(1px, 1px);
+    box-shadow: lightgray 0 0 5px;
+  }
+}
+
+.snapped {
+  background-color: rgba(lightgreen, 0.4);
+  color: darkgreen;
+  button {
+    box-shadow: lightgreen 0px 3px 8px;
+    color: darkgreen;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border: none;
+    margin-right: 20px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    &:active {
+      box-shadow: lightgreen 0 0 5px;
+      transform: translate(1px, 1px);
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 640px) {
+  body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+  }
+  .face-snap-card {
+  width: 320px;
+  min-width: 320px;
+  }
+}
+

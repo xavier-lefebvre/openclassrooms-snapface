@@ -1,0 +1,19 @@
+<div class='container-flex'>
+
+    <!--[ngClass] applique des classes CSS selon des conditions données. -->
+    <div class="face-snap-card" [ngClass]="{ snapped: clickSnap === 'Unsnap ?'}">
+        <h2>{{ faceSnap.title | uppercase }}</h2>
+        <p>Mis en ligne le {{ faceSnap.createdDate | date: 'longDate' }}</p>
+        <img [src]='faceSnap.imageUrl' [alt]='faceSnap.title'>
+        
+        <!-- *ngIf ajoute ou non des éléments au DOM selon une condition donnée-->
+        <p *ngIf='faceSnap.location' class='location'>Photo prise dans {{ faceSnap.location }}</p>
+        <p class='center'>{{ faceSnap.description }}</p>
+        <p class="center">
+            <button (click)='onAddSnap()'>{{ clickSnap }}</button>
+
+            <!-- [ngStyle] applique des valeurs dynamiques directement à des styles ; -->
+            <span [ngStyle]="{ color: 'rgb(0, ' + faceSnap.snaps + ', 0)' }">👍 {{ faceSnap.snaps }}</span>
+        </p>
+    </div>
+</div>
